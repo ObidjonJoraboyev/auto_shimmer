@@ -35,12 +35,12 @@ flutter pub get
 📖 Basic Usage
 ```dart
 AutoShimmer(
-isLoading: true,
-child: Container(
-height: 80,
-width: double.infinity,
-color: Colors.grey,
-),
+    isLoading: true,
+    child: Container(
+        height: 80,
+        width: double.infinity,
+        color: Colors.grey,
+    ),
 )
 ```
 
@@ -49,10 +49,10 @@ color: Colors.grey,
 Control shimmer movement direction and angle:
 ```dart
 AutoShimmer(
-isLoading: true,
-direction: ShimmerDirection.rtl,
-tilt: -0.25,
-child: Text("Loading..."),
+    isLoading: true,
+    direction: ShimmerDirection.rtl,
+    tilt: -0.25,
+    child: Text("Loading..."),
 )
 ```
 
@@ -63,32 +63,31 @@ ShimmerDirection.rtl
 ShimmerDirection.ttb
 ShimmerDirection.btt
 ```
-
 Vertical directions automatically disable tilt.
 
 🧱 Grid Example (2 items per row)
 ```dart
 GridView.builder(
-padding: const EdgeInsets.all(16),
-itemCount: 8,
-gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-crossAxisCount: 2,
-crossAxisSpacing: 12,
-mainAxisSpacing: 12,
-childAspectRatio: 1,
-),
-itemBuilder: (context, index) {
-return AutoShimmer(
-isLoading: true,
-child: Container(
-decoration: BoxDecoration(
-color: Colors.blue,
-borderRadius: BorderRadius.circular(16),
-),
-),
-);
-},
-);
+    padding: const EdgeInsets.all(16),
+    itemCount: 8,
+    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        crossAxisSpacing: 12,
+        mainAxisSpacing: 12,
+        childAspectRatio: 1,
+      ),
+      itemBuilder: (context, index) {
+      return AutoShimmer(
+        isLoading: true,
+        child: Container(
+        decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(16),
+            ),
+          ),
+        );
+      },
+  );
 ```
 🌙 Theme Awareness
 
@@ -100,11 +99,11 @@ Android (Material Theme)
 
 You can override colors manually:
 ```dart
-AutoShimmer(
-isLoading: true,
-baseColor: Colors.grey.shade300,
-highlightColor: Colors.white,
-child: ...
+    AutoShimmer(
+    isLoading: true,
+    baseColor: Colors.grey.shade300,
+    highlightColor: Colors.white,
+    child: ...
 )
 ```
 
@@ -112,9 +111,9 @@ child: ...
 
 ```dart
 AutoShimmer(
-isLoading: true,
-duration: const Duration(milliseconds: 1800),
-child: ...
+    isLoading: true,
+    duration: const Duration(milliseconds: 1800),
+    child: ...
 )
 ```
 ♿ Accessibility

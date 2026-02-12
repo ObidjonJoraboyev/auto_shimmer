@@ -1,9 +1,9 @@
 name: auto_shimmer
 description: A lightweight, theme-aware shimmer/skeleton loading wrapper for Flutter with directional support.
-version: 0.1.0
-homepage: https://github.com/yourusername/auto_shimmer
-repository: https://github.com/yourusername/auto_shimmer
-issue_tracker: https://github.com/yourusername/auto_shimmer/issues
+version: 0.1.1
+homepage: https://github.com/ObidjonJoraboyev/auto_shimmer
+repository: https://github.com/ObidjonJoraboyev/auto_shimmer
+issue_tracker: https://github.com/ObidjonJoraboyev/auto_shimmer/issues
 topics:
   - shimmer
   - skeleton
