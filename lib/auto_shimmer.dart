@@ -79,14 +79,12 @@ class _AutoShimmerState extends State<AutoShimmer>
         ? (CupertinoTheme.of(context).brightness == Brightness.dark)
         : Theme.of(context).brightness == Brightness.dark;
 
-    final base =
-        widget.baseColor ??
+    final base = widget.baseColor ??
         (isDark
             ? CupertinoColors.systemGrey6.resolveFrom(context)
             : CupertinoColors.systemGrey5.resolveFrom(context));
 
-    final highlight =
-        widget.highlightColor ??
+    final highlight = widget.highlightColor ??
         (isDark
             ? CupertinoColors.systemGrey5.resolveFrom(context)
             : CupertinoColors.systemGrey6.resolveFrom(context));
@@ -101,8 +99,7 @@ class _AutoShimmerState extends State<AutoShimmer>
             shaderCallback: (bounds) {
               final t = Curves.easeInOutSine.transform(_controller.value);
               final travel = (t * 2.8) - 1.4;
-              final double tilt =
-                  (widget.direction == ShimmerDirection.ttb ||
+              final double tilt = (widget.direction == ShimmerDirection.ttb ||
                       widget.direction == ShimmerDirection.btt)
                   ? 0.0
                   : widget.tilt;
