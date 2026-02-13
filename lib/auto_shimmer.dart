@@ -3,17 +3,44 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+/// Shimmer animation direction.
 enum ShimmerDirection { ltr, rtl, ttb, btt }
 
+/// A lightweight, theme-aware shimmer wrapper for any widget.
+///
+/// Use it to show loading placeholders (skeleton shimmer) on top of
+/// text, containers, cards, grids, and lists.
 class AutoShimmer extends StatefulWidget {
+  /// The widget to apply the shimmer effect to.
   final Widget child;
+
+  /// Whether shimmer animation is active.
+  ///
+  /// If `false`, returns [child] as-is.
   final bool isLoading;
+
+  /// Animation duration for one shimmer pass.
   final Duration duration;
+
+  /// Base color of the shimmer.
+  ///
+  /// If null, an adaptive theme-based color is used.
   final Color? baseColor;
+
+  /// Highlight color of the shimmer.
+  ///
+  /// If null, an adaptive theme-based color is used.
   final Color? highlightColor;
+
+  /// Shimmer direction (left-to-right, right-to-left, top-to-bottom, bottom-to-top).
   final ShimmerDirection direction;
+
+  /// Diagonal tilt amount for horizontal shimmer.
+  ///
+  /// Automatically ignored for vertical directions.
   final double tilt;
 
+  /// Creates an [AutoShimmer] widget.
   const AutoShimmer({
     super.key,
     required this.child,
