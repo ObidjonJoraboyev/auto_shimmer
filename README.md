@@ -16,8 +16,6 @@ Perfect for skeleton loaders, grids, lists, cards, and text placeholders.
 
 📸 Preview
 
-Replace this with your GIF inside /assets/demo.gif
-
 ![Demo](https://raw.githubusercontent.com/ObidjonJoraboyev/auto_shimmer/main/gif/example.gif)
 
 📦 Installation
